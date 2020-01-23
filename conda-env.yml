@@ -1,0 +1,13 @@
+dependencies:
+- python=3.6
+- conda-forge::psychopy=3.2.4
+- r::rstudio
+- r::r-base=3.6.1
+- pip
+- pip:
+  # PsychoPy dependencies
+  - psychtoolbox==3.0.16
+  - pygame==1.9.6
+  - pyo==1.0.1
+  - pyparallel; platform_system != "Windows"
+  - SoundFile==0.10.3.post1; platform_system == "Windows"
