@@ -39,10 +39,16 @@ uids[1:3]
 uids_splitted <- strsplit(uids, '_')
 uids_splitted[[1]][2]
 
-uids_second <- c()
-for (i in seq_len(N))
-  uids_second <- c(uids_second, uids_splitted[[i]][2])
+
+
+splits <- function() {
+  uids_second <- c()
+  for (i in seq_len(N))
+    uids_second <- c(uids_second, uids_splitted[[i]][2])
+}
+microbenchmark(splits(), 100)
 uids_second[1:3]
+profvis({splits})
 
 
 numbers_1 <- function(x) {
