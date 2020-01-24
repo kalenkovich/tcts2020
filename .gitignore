@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 .Rprofile
 renv/activate.R
+1_upravitelev/data/
