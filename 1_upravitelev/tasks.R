@@ -17,6 +17,19 @@ my_frame_dt <- as.data.table(my_frame)
 my_frame_tb <- as_tibble(my_frame)
 
 # задание
+f1 <- function(){
+  my_frame_tb %>%
+    group_by(v1) %>%
+    summarise(sum(v2))
+}
+
+f2 <- function(){
+  my_frame_dt
+}
+
+michrobenchmark(f1(), f2(), times = 100)
+
+
 N <- 1e4
 set.seed(12345)
 
