@@ -43,3 +43,23 @@ uids_second <- c()
 for (i in seq_len(N))
   uids_second <- c(uids_second, uids_splitted[[i]][2])
 uids_second[1:3]
+
+
+numbers_1 <- function(x) {
+  x <- as.character(x)
+  x <- strsplit(x, "")
+  x <- unlist(x)
+  digit.vector <- factor(x, levels = 0:9)
+  res <- table(digit.vector)
+  as.numeric(res)
+}
+
+library(profvis)
+set.seed(2378)
+vec <- sample.int(1000, 4e5, replace = TRUE)
+source('numbers_functions.r')
+profvis({
+  numbers_1(vec)
+  numbers_2(vec)
+  })
+  
