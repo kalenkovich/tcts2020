@@ -130,3 +130,6 @@ dmypy.json
 .Rprofile
 renv/activate.R
 1_upravitelev/data/
+2_moroz/test.pdf
+2_moroz/test_2.pdf
+2_moroz/test_2.tex
