@@ -1,0 +1,29 @@
+---
+title: "TCTS"
+output:
+  html_document: default
+  pdf_document:
+    latex_engine: xelatex
+params:
+  data: data
+  column: 1
+---
+
+```{r setup, echo = F}
+Sys.setlocale(category = 'LC_CTYPE', locale = "Russian")
+```
+
+# `r 1 + 1`
+
+```{r}
+2+2
+params$data
+```
+
+
+
+
+
+tutu
+
+ыфваолд
